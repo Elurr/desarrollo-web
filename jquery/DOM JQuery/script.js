@@ -34,10 +34,29 @@ $(document).ready(function () {
      $('#btnAppend').click(function () { 
         $('#pAppend').append(' <b>con texto añadido</b>');
         $('#ulAppend').append('<li><b>Elemento añadido</b></li>');
-        
+     });
+     $('#btnAppend2').click(function () { 
+        var txt1 = ' <b>'
+        var txt2 = 'con texto'
+        var txt3 = ' añadido</b>'
+        $('#pAppend').append(txt1 + txt2 + txt3);
+        // insertar li con texto plano
+        var ul1 = '<li><b>Elemento añadido</b></li>'
+        // crear li con jQuery
+        var ul2 = $('<li></li>').html('<li><b>Elemento añadido</b></li>')
+        // crear li con DOM vanilla
+        var ul3 = document.createElement('li');
+        ul3.innerHTML = '<li><b>Elemento añadido</b></li>'
+        $('#ulAppend').append(ul1, ul2, ul3)
      });
 
-    
+    // Remove/Empty
+    $('#btnRemove').click(function () {
+        $('#ulAppend').remove();
+    });
+    $('#btnEmpty').click(function () {
+        $('#ulAppend').empty();
+    });
 });
 
 var string = '';
