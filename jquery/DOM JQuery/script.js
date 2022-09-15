@@ -29,6 +29,14 @@ $(document).ready(function () {
         });
         
      });
+
+     // Append
+     $('#btnAppend').click(function () { 
+        $('#pAppend').append(' <b>con texto añadido</b>');
+        $('#ulAppend').append('<li><b>Elemento añadido</b></li>');
+        
+     });
+
     
 });
 
