@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alineamiento</title>
+
+    <style>
+        .contenedor {
+            width: 100%;
+            height: 150px;
+            background-color: lightgray;
+
+
+        }
+
+        .contenedor div {
+            width: 50px;
+            height: 50px;
+            background-color: gray;
+            border: 1px solid black;
+        }
+
+        .contenedor1 div {
+            float: left;
+            width: 24%;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .contenedor2 {
+            justify-content: center;
+        }
+
+        .contenedor3 {
+            align-items: center;
+        }
+
+        .contenedor4 {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contenedor5 {
+            justify-content: space-evenly;
+        }
+
+        .contenedor6{
+            justify-content: center;
+        }
+
+        /* Alineación con grid */
+        .item1 { grid-area: header;}
+        .item2 { grid-area: menu;}
+        .item3 { grid-area: main;}
+        .item4 { grid-area: right;}
+        .item5 { grid-area: footer;}
+
+        .grid-container {
+            display: grid;
+            grid-template-areas: 
+                'header header header header header header'
+                'menu main main main right right'
+                'menu footer footer footer footer footer';
+            gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .grid-container > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .grid-container2 {
+            display: grid;
+            grid-template-columns:
+                auto auto auto auto auto auto;
+            gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;    
+        }
+        .grid-container2 > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+        .grid-item8 {
+            /* orden de parámetros: 
+                posición fila / columna 
+                tamaño(span) filas / columnas */
+            grid-area: 2 / 1 / span 2 / span 3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cómo alinear los elementos de HTML con CSS</h1>
+
+    <h2>Alienación con float</h2>
+
+    <div class="contenedor contenedor1">
+        <div>div</div>
+        <div>div</div>
+        <div>div</div>
+        <div>div</div>
+    </div>
+
+    <hr>
+    <h2>Alineación con flexbox</h2>
+
+    <h3>justify-content: center</h3>
+    <div class="contenedor flex contenedor2">
+        <div>div</div>
+        <div>div</div>
+        <div>div</div>
+        <div>div</div>
+    </div>
+
+    <h3>align-items: center</h3>
+    <div class="contenedor flex contenedor3">
+        <div>div</div>
+        <div>div</div>
+        <div>div</div>
+        <div>div</div>
+    </div>
+    <h3>justify-content: center + align-items: center</h3>
+    <div class="contenedor flex contenedor2 contenedor3">
+        <div>div</div>
+        <div>div</div>
+        <div>div</div>
+        <div>div</div>
+    </div>
+
+    <h3>flex-direction: column</h3>
+    <div class="contenedor flex contenedor4">
+        <div>div</div>
+        <div>div</div>
+        <div>div</div>
+        <div>div</div>
+    </div>
+
+    <h3>justify-content: space</h3>
+    <div class="contenedor flex contenedor5">
+        <div>div</div>
+        <div>div</div>
+        <div>div</div>
+        <div>div</div>
+    </div>
+    <h3>justify-content: space</h3>
+    <div class="contenedor flex contenedor6">
+        <div>
+            <div>div1</div>
+            <div>div1</div>
+        </div>
+        <div>
+            <div>div2</div>
+            <div>div2</div>
+        </div>
+    </div>
+    
+    <hr>
+    <h2>Alineación con grid</h2>
+
+    <img width="400px" src="./IMG_20220712_084307.jpg" alt="">
+
+    <div class="grid-container">
+        <div class="item1">Header</div>
+        <div class="item2">Menu</div>
+        <div class="item3">Main</div>
+        <div class="item4">Right</div>
+        <div class="item5">Footer</div>
+    </div>
+
+    <br>
+
+    <div class="grid-container2">
+        <div class="grid-item1">1</div>
+        <div class="grid-item2">2</div>
+        <div class="grid-item3">3</div>
+        <div class="grid-item4">4</div>
+        <div class="grid-item5">5</div>
+        <div class="grid-item6">6</div>
+        <div class="grid-item7">7</div>
+        <div class="grid-item8">8</div>
+        <div class="grid-item9">9</div>
+        <div class="grid-item10">10</div>
+        <div class="grid-item11">11</div>
+        <div class="grid-item12">12</div>
+        <div  class="grid-item13">13</div>
+    </div>
+
+
+    <pre>
+
+
+        .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ..
+
+
+
+
+
+
+
+
+
+
+        ...
+    </pre>
+</body>
+
+</html>

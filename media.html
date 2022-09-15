@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+
+    <style>
+
+        img {
+            width: 500px;
+            height: auto;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Media</h1>
+    <p>
+        Un documento HTML puede contener elementos de media 
+        como imágenes, vídeos o pistas de audio.
+    </p>
+
+    <h3>Imágenes</h3>
+
+    <h4>Imagen alojada localmente</h4>
+
+    <img src="Cute_grey_kitten.jpg" alt="gatito bonito">
+
+    <h4>Imagen referenciada de la web</h4>
+    
+    <img 
+    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/71E1/production/_99735192_gettyimages-459467912.jpg" 
+    alt="">
+
+    <h3>Vídeos</h3>
+
+    <h4>Vídeos alojados en la web</h4>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-qIHiq0Yafg" 
+    title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+    
+    <h4>Vídeos alojados en el servidor</h4>
+
+    <video src="./recursos/mov_bbb.mp4"
+        controls
+        autoplay
+        loop
+        muted>
+
+    </video>
+
+    <h3>Audio</h3>
+
+    <audio src="./recursos/horse.ogv"
+        controls
+        autoplay
+        loop
+        muted>
+
+    </audio>
+
+    <h3>Controles usando JavaScript</h3>
+
+    <video src="./recursos/mov_bbb.mp4"
+        id="myVideo"
+        width="480"></video>
+    <br>
+    <span>
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="big()">Big</button>
+        <button onclick="small()">Small</button>
+        <button onclick="normal()">Normal</button>
+        <button onclick="fullscreen()">Fullscreen</button>
+    </span>    
+
+
+    <pre>
+        .
+
+
+
+
+
+
+        ..
+
+
+
+
+
+ 
+
+        ...
+    </pre>
+
+
+
+</body>
+<script>
+    var video = document.getElementById("myVideo");
+
+    function playPause() {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    }
+
+    function big() {
+        video.width = 720;
+    }
+    function small() {
+        video.width = 360;
+    }
+    function normal() {
+        video.width = 480;
+    }
+    function fullscreen() {
+        video.requestFullscreen();
+    }
+
+</script>
+
+
+</html>

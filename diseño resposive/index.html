@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño web responsive</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+
+</head>
+
+<body>
+    <h1>Título de la página</h1>
+
+    <div class="banner">
+
+    </div>
+
+    <div class="menu">
+
+        <a href="javascript:void(0);">Home</a>
+        <div id="desplegable">
+            <a href="javascript:void(0);">Services</a>
+            <a href="javascript:void(0);">About</a>
+            <a href="javascript:void(0);">Contact</a>
+        </div>
+        <div id="btnHam">
+            <button id="hamburguer" onclick="displayMenu()">
+                <div id="linea1"></div>
+                <div id="linea2"></div>
+                <div id="linea3"></div>
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="section">
+            <h2>Título sección</h2>
+            <div>
+                <div class="article">
+                    <h3>Título del artículo</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio doloremque quaerat voluptas!
+
+                    </p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio doloremque quaerat voluptas!
+
+                    </p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio doloremque quaerat voluptas!
+
+                    </p>
+                </div>
+                <div class="article">
+                    <h3>Título del artículo</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In iure nostrum maiores illo. Laboriosam
+                        praesentium atque officiis esse quia culpa, quasi velit quod voluptatum in aut totam commodi
+                        saepe quos.
+
+                    </p>
+                    <img src="./img/licensed-image.jfif" alt="">
+                </div>
+                <div class="carousel">
+                    <img src="./img/licensed-image.jfif" alt="">
+                    <img src="./img/licensed-image.jfif" alt="">
+                    <img src="./img/licensed-image.jfif" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Título sección</h2>
+            <img src="./img/licensed-image.jfif" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque sequi, corrupti beatae assumenda
+                possimus sunt culpa ea labore nisi voluptas? Error atque doloremque, perferendis unde iure ut porro
+                voluptate quis?
+
+            </p>
+        </div>
+
+        <div class="footer">
+            <div>Info de contacto</div>
+            <div>RRSS</div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    var menu = document.getElementById('desplegable');
+    var hamburguer = document.getElementById('hamburguer');
+
+    function displayMenu() {
+        if (menu.style.display == 'flex') {
+            menu.style.display = 'none';
+            hamburguer.classList.remove('equis');
+        } else {
+            menu.style.display = 'flex';
+            hamburguer.classList.add('equis');
+        }
+    }
+
+
+</script>
+
+</html>

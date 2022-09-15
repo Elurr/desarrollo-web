@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a javascript</title>
+</head>
+
+<body>
+    <h1>JavaScript básico</h1>
+
+    <h2>
+        Operaciones básicas con javascript
+    </h2>
+
+    <h4>
+        Manipulación de HTML y CSS con JavaScript
+    </h4>
+    <p>
+        La manipulación o cambios realizados a los distintos elementos
+        y sus atributos con js, se llaman DOM.
+        (Document Object Model)
+    </p>
+
+    <p id="ejemplo1">
+        Clica el botón de abajo para cambiar el color de este párrafo.
+    </p>
+
+    <!-- ref al JS en línea 1 -->
+    <button type="button" onclick="changeColor()">
+        Click!
+    </button>
+
+    <h2>Variables</h2>
+    <p>
+        Las variables son bloques de memoria donde almacenamos información.
+    </p>
+    <p>
+        En javascript hay varios tipos de variables, las más básicas son:
+    <ul>
+        <li>strings o cadenas de texto.</li>
+        <li>ints o valores numéricos.</li>
+        <li>booleanos con valores binarios.</li>
+    </ul>
+    </p>
+
+    <h4>Declarar variables en js</h4>
+    <p>
+        Según el <b>alcance o "scope"</b> que queramos que una variable tenga,
+        las vamos declarar con los siguientes "statements".
+    <ul>
+        <li>var o declaracion global o genérica.</li>
+        <li>let o declaracion local.</li>
+        <li>const cuando queramos declarar una variable cuyo
+            valor es estático.
+        </li>
+    </ul>
+    </p>
+
+    <!-- Ref al JS en línea 10 -->
+    <input id="input1" type="text" placeholder="Escribe p1, p2, p3 y clica">
+    <button onclick="changeWeight()">Cambiar color</button>
+    <p id="p1">Párrafo 1</p>
+    <p id="p2">Párrafo 2</p>
+    <p id="p3">Párrafo 3</p>
+
+    <hr>
+    <!-- Ref al JS en línea 31 -->
+    <input id="input2" type="text" placeholder="Escribe texto y clica">
+    <select id="select2">
+        <option value="pTxt1">Párrafo 1</option>
+        <option value="pTxt2">Párrafo 2</option>
+        <option value="pTxt3">Párrafo 3</option>
+        <option value="all">Todos</option>
+    </select>
+    <button onclick="changeText()">Cambiar Texto</button>
+    <p id="pTxt1">Párrafo 1</p>
+    <p id="pTxt2">Párrafo 2</p>
+    <p id="pTxt3">Párrafo 3</p>
+
+    <hr>
+
+    <h2>Bucles</h2>
+
+    <p>
+        Hay distintos tipos de bucles en JavaScript. 
+        Éstos son bloques de código que se ejecutan un número repetido de veces.
+
+        <ul>
+            <li>for: se ejecutan x número de veces, siendo x configurable
+                por nosotros.
+            </li>
+            <li>while: similar a los for, se ejecutan mientras una condición
+                se cumpla (true)
+            </li>
+            <li>do while: mientras que while comprueba la condición antes
+                de ejecutarse, éste se ejecuta una vez y luego comprueba 
+                la condición.
+            </li>
+        </ul>
+    </p>
+
+    <h5>Ejemplo</h5>
+
+    <p><b>Contador hasta 20</b></p>
+    <button onclick="contador()">Pulsa para imprimir un contador hasta 20</button>
+    <p id="contador">0</p>
+
+
+    <p><b>Imprimir x párrafos</b></p>
+    <p>for</p>
+    <input id="inputPrint" type="text"><button onclick="print()">Print</button>
+    <div id="contenedor"></div>
+
+    <p>switch case</p>
+    <select id="selectorPrint">
+        <option value="1">Imprimir un párrafo</option>
+        <option value="2">Imprimir dos párrafos</option>
+        <option value="3">Imprimir tres párrafos</option>
+        <option value="4">Imprimir cuatro párrafos</option>
+        <option value="5">Imprimir cinco párrafos</option>
+        <option value="0">Borrar todo</option>
+    </select>
+    <button onclick="print2()">Print</button>
+    <div id="contenedor2"></div>
+
+    <h4>Imprimir un párrafo de un color indicado</h4>
+    <select id="selectColor">
+        <option value="black">Imprimir un párrafo de color negro</option>
+        <option value="blue">Imprimir un párrafo de color azul</option>
+        <option value="red">Imprimir un párrafo de color rojo</option>
+        <option value="orange">Imprimir un párrafo de color naranja</option>
+        <option value="green">Imprimir un párrafo de color verde</option>
+    </select>
+    <button onclick="printColor()">Print</button>
+    <div id="cont3"></div>
+
+    <hr>
+
+    <h2>Operadores</h2>
+
+    <p>Ref al js en línea 174</p>
+    <button onclick="jsOperator()">Click</button>
+
+    <h4>Operadores de asignación</h4>
+
+    <p>Estos operadores asignan valores a las variables de JS
+        <code>
+            <ul>
+                <li>x += y (x = x + y)</li>
+                <li>x -= y (x = x - y)</li>
+                <li>x *= y (x = x * y)</li>
+                <li>x /= y (x = x / y)</li>
+                <li>x %= y (x = x % y)</li>
+                <li>x **= y (x = x ** y)</li>
+            </ul>
+        </code>
+    </p>
+
+    <h4>Operando con strings</h4>
+
+    <p>
+        Los strings se pueden concatenar (unir) mediante el operador +
+    </p>
+    <p>Ref al JS en línea 193</p>
+
+    <h4>Operadores de comparación</h4>
+
+    <p>
+        Se usan en los condicionales 
+        y comparan dos valores o tipos
+
+        <ul>
+            <li>==   equivale a (x == 5: true)("5" == x: true)</li>
+            <li>===  mismo valor y tipo (x === 5: true)(x === "5": false)</li>
+            <li>!= no equivale a</li>
+            <li>!== distinto valor o tipo</li>
+            <li>&gt; mayor que</li>
+            <li>&lt; menor que</li>
+            <li>&gt;= mayor que o igual a</li>
+            <li>&lt;= menor que o igual a</li>
+
+        </ul>
+    </p>
+
+    <h4>Operadores lógicos</h4>
+
+    <p>
+        Estos operadores se usan en conjunto con los operadores de comparación
+    </p>
+    <p>
+        Se usan para determinar la lógica entre variables o valores
+        <ul>
+            <li>&& (and)</li>
+            <li>|| (or)</li>
+            <li>! (not)</li>
+            <li>? (operador ternario)</li>
+        </ul>
+    </p>
+    <p>Ref al JS en línea 203</p>
+
+
+
+
+    <pre>
+        ..
+
+
+
+
+
+
+
+
+
+        ..
+
+
+
+
+
+
+
+
+        ..
+    </pre>
+</body>
+
+<script src="script.js"></script>
+
+</html>

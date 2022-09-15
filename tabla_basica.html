@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Básica</title>
+
+    <style>
+        h1 {
+            color: blue;
+        }
+
+        table {
+            width: 100%;
+            border: 2px solid black;
+            border-collapse: collapse;
+            
+        }
+
+        td, th {
+            border: 1px solid black;
+        }
+
+        td {
+            text-align: left;
+        }
+        th {
+            background-color: blueviolet;
+            color: white;
+        }
+
+        .der {
+            text-align: right;
+        }
+
+        .bold {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .gray {
+            background-color: lightgray;
+        }
+        .blue {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tablas</h1>
+
+    <p>
+        Escribir tablas en HTML
+    </p>
+
+    <table>
+        <!-- Esto es un comentario en HTML -->
+        <!-- El atajo es ctrl + Ç -->
+        <tr>
+            <th>Nombre</th>
+            <th>Ciudad</th>
+            <th>Importe</th>
+        </tr>
+        <tr class="gray">
+            <td class="bold">Pepito</td>
+            <td>Reus</td>
+            <td class="der">2300€</td>
+        </tr>
+        </tr>
+        <tr class="blue">
+            <td class="bold">Carmen</td>
+            <td>Valencia</td>
+            <td class="der">523,00€</td>
+        </tr>
+        <tr class="gray">
+            <td class="bold">Joaquín</td>
+            <td>Barcelona</td>
+            <td class="der">3.342,00€</td>
+        </tr>
+        <tr class="blue">
+            <td class="bold">Hernando</td>
+            <td>Madrid</td>
+            <td class="der">3.342,00€</td>
+        </tr>
+        <tr class="gray">
+            <td class="bold">Estefania</td>
+            <td>Alicante</td>
+            <td class="der">2000€</td>
+        </tr>
+        <tr class="gray">
+            <td colspan="2"  class="der bold"> Total </td>
+            <td class="der">11.532,00€</td>
+        </tr>
+
+
+
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores CSS</title>
+
+    <style>
+        /* * {
+            color: red;
+        }
+
+        p {
+            color: blue;
+        } */
+
+        .verde {
+            color: orange;
+        }
+
+        p.verde {
+            color: purple;
+        }
+
+        .verde p span {
+            color: cyan;
+        }
+
+        .amarillo {
+            text-align: center;
+        }
+
+        .azul {
+            font-weight: bold;
+        }
+
+        div p {
+            background-color: burlywood;
+        }
+
+        div>p {
+            background-color: darksalmon;
+        }
+
+        span + p {
+            color: white;
+        }
+
+        section~p{
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        input:focus {
+            background-color: green;
+            color: white;
+        }
+        input:active {
+            background-color: black;
+            color: white;
+        }
+
+        /* Link sin visitar */
+        a:link {
+            color: hotpink;
+        }
+
+        /* Link visitado */
+        a:visited {
+            color: gray;
+        }
+
+        /* Al pasar el cursor */
+        a:hover {
+            color: chartreuse;
+        }
+
+        /* Al hacer clic (seleccionar) */
+        a:active {
+            color: blue;
+        }
+
+        div p:hover {
+            font-family: monospace;
+        }
+        div span:first-child {
+            background-color: tomato;
+            color: royalblue;
+        }
+        div span:first-child:hover {
+            background-color: transparent;
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Selectores de CSS</h1>
+    <p>
+        Los selectores son grupos de elementos sobre los que aplicamos ciertas
+        reglas de CSS.
+    </p>
+
+    <h2>Selectores generales</h2>
+    <p>
+        Agrupan a todos los elementos cuya etiqueta coincida con el nombre del selector
+    </p>
+    <p>
+        <code>
+            <pre>
+                p {
+                    color: red;
+                }
+            </pre>
+        </code>
+    </p>
+
+    <h2>Clases e IDs</h2>
+    <p>
+        Las clases son grupos de elementos a los que
+        se les puede aplicar las mismas reglas de CSS.
+    </p>
+    <p>
+        <code>
+            <pre>
+                .grupo1 {
+                    font-weight: 500;
+                    background-color: blue;
+                }
+            </pre>
+        </code>
+    </p>
+    <p>
+        Las IDs identifican a un único elemento, por lo que
+        las reglas de CSS sólo se aplicarán a éste.
+    </p>
+    <p>
+        <code>
+            <pre>
+                #elem1 {
+                    font-weight: 300;
+                    color: white;
+                }
+            </pre>
+        </code>
+    </p>
+
+    <h2>Selector universal</h2>
+    <p>
+        Agrupa a <b>todos</b> los elementos HTML del documento
+    </p>
+
+    <p>
+        <code>
+            <pre>
+                * {
+                    color: red;
+                }
+            </pre>
+        </code>
+    </p>
+
+    <h2>Selectores avanzados</h2>
+
+    <h4>Seleccionar elementos dentro de una clase</h4>
+    <p>
+        Se pueden combinar selectores de clase y generales
+        para distinguir elementos dentro de una clase.
+    </p>
+    <p>
+        <code>
+            <pre>
+                p.grupo1 {
+                    text-align: right;
+                }
+            </pre>
+        </code>
+    </p>
+
+    <h3 class="verde">Ejemplo para Pablo</h3>
+    <p class="verde">
+        Algo para rellenar la p.
+    <div class="verde">
+        Texto en div
+        <p>
+            p en div
+            <span> esto es un span</span>
+        </p>
+    </div>
+    </p>
+    <h5 class="verde">
+        Pablo no tiene ni idea de música
+    </h5>
+    <p class="verde">
+        Algo para rellenar la p.
+    </p>
+    <hr class="verde">
+    <p class="verde">
+        Algo para rellenar la p.
+    </p>
+
+    <h4>Combinando clases</h4>
+    <p>
+        Los elementos pueden tener tantas clases como necesitemos.
+    </p>
+
+    <p class="verde">
+        Text de relleno, bla bla bla.
+    </p>
+    <p class="verde amarillo">
+        Text de relleno, bla bla bla.
+    </p>
+    <p class="verde amarillo azul">
+        Text de relleno, bla bla bla.
+    </p>
+
+    <h4>Agrupando selectores</h4>
+    <p>
+        Si vamos a usar las mismas reglas para distintos
+        tipos de elementos, los selectores se pueden agrupar.
+    </p>
+    <p>
+        <code>
+            <pre>
+                h1 {
+                    text-align: center;
+                }
+                h2 {
+                    text-align: center;
+                }
+                span {
+                    text-align: center;
+                }
+            </pre>
+        </code>
+    </p>
+    <p>Es lo mismo que:</p>
+    <p>
+        <code>
+            <pre>
+                h1, h2, span {
+                    text-align: center;
+                }
+            </pre>
+        </code>
+    </p>
+    <hr>
+    <h2>Combinadores</h2>
+    <p>
+        Un selector puede contener uno de los siguientes
+        4 comibnadores:
+    </p>
+    <ul>
+        <li>Descendiente (espacio)</li>
+        <li>Hijo directo (>)</li>
+        <li>Hermano adyacente (+)</li>
+        <li>Hermano general (~) (se escribe con Alt+126)</li>
+    </ul>
+
+    <div>
+        <span>
+            Texto en el primer span.
+        </span>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Cum voluptatem ratione, officia illum asperiores facere ducimus.
+
+        </p>
+        <section>
+            <p>
+                Párrafo anidado.
+            </p>
+        </section>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Cum voluptatem ratione, officia illum asperiores facere ducimus.
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Cum voluptatem ratione, officia illum asperiores facere ducimus.
+        </p>
+        <span>
+            Texto en el último span.
+        </span>
+    </div>
+
+    <hr>
+
+    <h2>Pseudo Clases</h2>
+    <p>
+        Las pseudo-clases especifican estados especiales de un elemento.
+    </p>
+    <button>Pásame el cursor por encima!</button> <br>
+
+    <p>Clica en el input para "activarlo"</p>
+    <input type="text">
+
+    <p>
+        Los links tienen varios estados especiales:
+    </p>
+    <ul>
+        <li>Sin visitar</li>
+        <li>Visitado</li>
+        <li>Hover con el cursor</li>
+        <li>Seleccionado</li>
+    </ul>
+
+    <a href="alineamiento.html" target="_blank">Link de prueba</a>
+
+    <h4>Combinadores con pseudo-clases</h4>
+
+    <div>
+        <span>
+            Texto en el primer span.
+        </span>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Cum voluptatem ratione, officia illum asperiores facere ducimus.
+
+        </p>
+        <section>
+            <p>
+                Párrafo anidado.
+            </p>
+        </section>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Cum voluptatem ratione, officia illum asperiores facere ducimus.
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Cum voluptatem ratione, officia illum asperiores facere ducimus.
+        </p>
+        <span>
+            Texto en el último span.
+        </span>
+    </div>
+
+</body>
+
+</html>

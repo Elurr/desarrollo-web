@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de datos en JS</title>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+
+    <style>
+        #clockDiv {
+            position: fixed;
+            top: 90%;
+            left: 35%;
+            color: #17d4fe;
+            font-size: 60px;
+            font-family: Orbitron;
+            letter-spacing: 7px;
+            background-color: black;
+            padding: 10px;
+            text-align: center;
+            width: 500px;
+            border-radius: 30px;
+
+            /* Al pasar el cursor sobre el reloj, 
+            éste toma forma de mano */
+            cursor: pointer;
+            /* Impide que el usuario seleccione el
+            texto con el ratón */
+            user-select: none;
+        }
+
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            /* transform translate indica el
+            punto de referencia del elemento.
+            Por defecto es la esquina superior izquierda,
+            con esto los transladamos al centro del div */
+            transform: translate(-50%, -50%);
+            width: 800px;
+            background-color: black;
+            color: #17d4fe;
+            font-size: 30px;
+            font-family: Orbitron;
+            letter-spacing: 3px;
+            text-align: center;
+            padding: 25px;
+            border-radius: 30px;
+
+            user-select: none;
+
+
+            /* Esto hace que esté oculto
+            por defecto */
+            opacity: 0;
+            transition: opacity 1000ms;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tipos de datos en JavaScript</h1>
+    <h2>Tipos</h2>
+    <p>
+    <ul>
+        <li>strings: Cadenas de caracteres</li>
+        <li>number o int: Números operables</li>
+        <li>boolean: valores binarios (true, false o 0, 1)</li>
+        <li>arrays: cadenas de valores</li>
+        <li>objetos: cadenas de valores con propiedades</li>
+    </ul>
+    </p>
+
+    <h3>Strings</h3>
+    <h4>Métodos</h4>
+
+    <h5>Length</h5>
+    <p>
+        Para medir la longitud, o la cantidad de caracteres,
+        de un string usaremos el método .length
+    </p>
+    <button onclick="strings()">Click</button>
+    <p>Ref js línea 1</p>
+
+    <h5>Cortar strings</h5>
+    <p>
+        Hay tres métodos para extraer partes de un string
+    <ul>
+        <li>slice(start, end)</li>
+        <li>substring(start, end)</li>
+        <li>substr(start, length) deprecado</li>
+    </ul>
+    </p>
+    <p>Ref al Js línea 9</p>
+
+    <h5>Modificar strings con replace()</h5>
+    <p>Ref en línea 19</p>
+
+    <h5>Modificar caps o mayúsculas</h5>
+    <p>Se usan toUpperCase() y toLowerCase()</p>
+    <p>Ref en línea 25</p>
+
+    <h5>Búsquedas en strings</h5>
+    <p>
+        Hay varios métodos para buscar coincidencias
+        en strings:
+    <ul>
+        <li>indexOf()</li>
+        <li>lastIndexOf()</li>
+        <li>startsWith()</li>
+        <li>endsWith()</li>
+    </ul>
+    </p>
+    <p>Ref en línea 32</p>
+
+    <h3>Números</h3>
+    <p>
+        JavaScript sólo tiene un tipo de número. Éstos pueden
+        escribirse con o sin decimales.
+    </p>
+    <p>
+        Los números de JS son siempre float de doble presición
+        (double). Son precisos hasta 15 dígitos.
+    </p>
+    <button onclick="numbers()">Números!</button>
+    <p>Ref al JS en línea 53</p>
+
+
+    <h3>Arrays</h3>
+    <p>
+        Un array es un tipo especial de variable. Puede contener
+        más de un valor.
+    </p>
+    <p>
+        Los arrays son útiles cuando queremos trabajar con listas de
+        datos de larga longitud.
+    </p>
+    <button onclick="arrays()">Arrays!</button>
+    <div id="listaClase"></div>
+    <div id="listaClase2"></div>
+    <p>Ref al Js en línea 156</p>
+
+    <h4>Ejemplo 1st letter mayus (JS 247)</h4>
+    <button onclick="firstCap()">Click!</button>
+    <p id="firstCap"></p>
+
+    <h3>Métodos de array</h3>
+    <button onclick="arrayMethods()">Click!</button>
+    <div id="arrayDiv"></div>
+    <div id="arrayDiv2"></div>
+    <div id="arrayDiv3"></div>
+
+    <h4>Ejercicio Tests</h4>
+    <button onclick="gradeTests()">Click</button>
+    <div id="gradeDiv"></div>
+    <div id="gradeDiv2"></div>
+
+    <h3>Objetos</h3>
+    <p>
+        Un objeto, al igual que los arrays, puede contener
+        numerosos valores. La principal diferencia es que el 
+        índice de los objetos tiene nombre. 
+    </p>
+    <p>
+        Los arrays son objetos especiales cuyo índice está numerado.
+    </p>
+
+    <h4>Ejemplo</h4>
+    <p>
+        Un objeto <b>coche</b> tiene <b>propiedades</b> como peso y color.
+        Y también tiene <b>métodos</b> como arrancar y parar.
+    </p>
+    <p>
+        Todos los objetos de tipo coche comparten las mismas propiedades
+        aunque sus valores varían.
+    </p>
+    <p>
+        Todos los coches tienen los mismos métodos pero varía su 
+        ejecución.
+    </p>
+
+    <p>Ref al Js línea 501</p>
+
+    <button onclick="objects()">Click</button>
+    <div id="objectsDiv"></div>
+
+    <h3>Objeto Date()</h3>
+    <p>
+        El objeto fecha viene predefinido en el programa. NO se puede
+        modificar o alterar. Pero podemos crear copias con estos fines.
+    </p>
+    <p>
+        El objeto fecha contiene los ms que han pasado desde
+        el tiempo zero hasta el momento actual. El tiempo zero es
+        el 1 de enero de 1970.
+    </p>
+    <p>Ref al JS 530</p>
+
+    <button onclick="date()">Click</button>
+    <div id="dateDiv"></div>
+    <div id="dateDiv2"></div>
+    <div id="dateDiv3"></div>
+
+    <h3>Reloj JS (línea 623)</h3>
+    <div id="clockDiv"></div>
+    <button id="clockBtn">Mostrar fecha</button>
+
+    <div id="modal" class="modal"></div>
+    <pre>
+
+
+
+
+        ..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ...
+    </pre>
+
+</body>
+<script src="data-types.js"></script>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con JS</title>
+</head>
+
+<body>
+    <form action="#">
+        <label for="iName">Nombre</label>
+        <input id="iName" type="text">
+
+        <br>
+        <label for="iAge">Edad</label>
+        <input type="text" id="iAge">
+
+        <br>
+        <label for="married">Estado civil</label>
+        <select id="married">
+            <option value="true">Casado/a</option>
+            <option value="false">Soltero/a</option>
+        </select>
+
+        <button onclick="puedeVotar()">Enviar</button>
+        <p id="result"></p>
+    </form>
+</body>
+
+<script>
+    function puedeVotar() {
+        let inputName = document.getElementById('iName');
+        let inputAge = document.getElementById('iAge');
+        let pResult = document.getElementById('result');
+        let selector = document.getElementById('married');
+
+        let valueName = inputName.value;
+        let valueAge = inputAge.value;
+        let valueMarried = selector.value;
+        let married = false;
+            //valor por defecto de un bool
+
+        // married = (valueMarried == "true") ? false : true;
+        if (valueMarried == "true") {
+            married = true;
+        } else {
+            married = false;
+        }
+
+        if (valueName != "" && valueAge > 0) {
+
+            if (valueAge > 50) {
+                pResult.innerHTML = "Puedes votar"
+            } else if (valueAge > 30) {
+                pResult.innerHTML = "Ya no eres tan joven pero puedes votar"
+            } else if (valueAge > 17) {
+                pResult.innerHTML = "Aún eres joven y puedes votar"
+            } else {
+                pResult.innerHTML = "Aún eres demasiado joven para votar"
+            }
+
+            if (married == true) {
+                pResult.innerHTML += " y enhorabuena por el enlace"
+            }
+
+        } else {
+            pResult.innerHTML = "Por favor rellene los datos correctamente"
+        }
+
+
+    }
+
+</script>
+
+
+</html>
