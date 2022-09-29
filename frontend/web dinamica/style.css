@@ -2,17 +2,35 @@ body, button {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.modal {
+div.modal {
     display: none;
+
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+
+    /* background-color: rgb(0, 0, 0); */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-form {
-    border: 3px solid #f1f1f1f1;
+form.modal-content {
+    border: 1px solid #888;
     border-radius: 5px;
+
+    background-color: #fefefe;
+    margin: 10% auto 0 auto;
+    width: 40%;
 }
 
-.container {
+div.container {
     padding: 16px;
+}
+div.cancel {
+    background-color: #f1f1f1f1;
 }
 
 .close {
@@ -49,6 +67,9 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+button:hover {
+    opacity: 0.8;
+}
 
 #btnLogin {
     background-color: #00BBf9;
@@ -78,4 +99,38 @@ img.avatar {
 
 label.remember {
     font-size: .9rem;
+}
+span.psw {
+    float: right;
+    padding-top: 14px;
+}
+
+.animate {
+    animation: zoom 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+@media screen and (max-width: 850px){
+    .modal-content {
+        /* margin: 10% auto 0 auto; */
+        width: 80% !important;
+        /* height: 800px; */
+    }
+}
+
+@media screen and (max-width: 420px){
+    div.cancel {
+        text-align: center;
+    }
+    span.psw {
+        display: block !important;
+        float: none !important;
+    }
+    .btnCancel {
+        width: 100% !important;
+    }
 }

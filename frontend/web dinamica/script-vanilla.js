@@ -8,7 +8,18 @@ btnLogin.addEventListener('click', () => {
 
 // Botón que cierre el modal
 const btnClose = document.getElementById('btnClose');
+const btnCancel = document.getElementById('btnCancel');
 
 btnClose.addEventListener('click', () => {
     modalForm.style.display = 'none';
 })
+btnCancel.addEventListener('click', () => {
+    modalForm.style.display = 'none';
+})
+
+// Al hacer clic fuera del modal, éste se cierra
+window.onclick = function(event) {
+    if (event.target == modalForm) {
+        modalForm.style.display = 'none';
+    }
+}
