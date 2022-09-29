@@ -42,7 +42,7 @@ include 'data_read.php';
         <input type="text" maxlength="3" name="player_name">
         <label for="">Nombre</label> <br>
         <input type="number" name="player_points">
-        <label f or="">Puntos</label> <br>
+        <label for="">Puntos</label> <br>
 
         <input type="submit" value="Enviar">
     </form>

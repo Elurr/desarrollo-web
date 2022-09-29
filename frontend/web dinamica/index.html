@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web dinámica</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Formulario (modal) de Inicio de Sesión</h2>
+
+    <button id="btnLogin">Login</button>
+
+    <div id="loginForm" class="modal">
+
+        <span id="btnClose" class="close" title="Cerrar">&times;</span>
+        <form action="#" class="modal-content animate">
+            <div class="img-container">
+                <img class="avatar" src="../res/img/img_avatar.png" alt="Avatar">
+            </div>
+
+            <div class="container">
+                <label for="user"><b>Usuario</b></label>
+                <input type="text" name="user" placeholder="Introduzca su nombre de usuario" required>
+
+                <label for="psw"><b>Contraseña</b></label>
+                <input type="password" name="psw" placeholder="Introduzca su contraseña" required>
+
+                <button type="submit">Iniciar sesión</button>
+                <label class="remember">
+                    <input type="checkbox" name="remember" checked>
+                    Recordarme la próxima vez que inicie sesión
+                </label>
+            </div>
+
+            <div class="container cancel">
+                <button type="button" class="btnCancel">
+                    Cancelar
+                </button>
+                <span class="psw">Olvidaste la <a href="#">
+                    contraseña
+                    </a>?
+                </span>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+<script src="script-vanilla.js"></script>
+
+</html>
