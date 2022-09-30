@@ -31,6 +31,7 @@ div.container {
 }
 div.cancel {
     background-color: #f1f1f1f1;
+    border-radius: 0 0 5px 5px;
 }
 
 .close {
@@ -60,6 +61,7 @@ input[type=password] {
 
 /* Botones */
 button {
+    background-color: #00BBf9;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -72,7 +74,9 @@ button:hover {
 }
 
 #btnLogin {
-    background-color: #00BBf9;
+    position: absolute;
+    top: 0;
+    right: 10px;
 }
 
 button[type=submit] {
@@ -96,6 +100,10 @@ img.avatar {
     width: 40%;
     border-radius: 50%;
 }
+img.avatar:hover {
+    transform: scale(1.05);
+    transition: .5s;
+}
 
 label.remember {
     font-size: .9rem;
@@ -113,6 +121,44 @@ span.psw {
     from {transform: scale(0);}
     to {transform: scale(1);}
 }
+
+/* Menú desplegable */
+    /* El contenedor div */
+div.dropdown {
+    position: relative;
+    display: inline-block;
+}
+    /* Contenido del desplegable oculto por defecto */
+div.dropdown-content {
+    display: none;
+
+    position: absolute;
+
+    background-color: #f1f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}    
+
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    padding: 12px 16px;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.btnDrop:hover {
+    cursor: default;
+}
+
+
+    /* Mostrar el desplegable al pasar el ratón por el botón */
+.dropdown:hover .dropdown-content {
+    display: block;
+}    
 
 @media screen and (max-width: 850px){
     .modal-content {
