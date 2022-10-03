@@ -44,7 +44,7 @@ function showSlides() {
     }
     // aumentamos el contador del índice del carrete
     slideIndex++;
-    
+
     // mostrar la siguiente img
     if (slideIndex >= carrete.length) {
         // si el contador supera la longitud del carrete, se reinicia
@@ -95,9 +95,6 @@ function moveSlides(x) {
 
 }
 
-// arrancamos el carrusel
-// moveSlides(0);
-
 // Cambiar imgs con los puntos/thumbnails/miniaturas
 function chooseSlides(x) {
 
@@ -110,4 +107,17 @@ function chooseSlides(x) {
     slideIndex = x;
     carrete[slideIndex].style.display = 'block';
     carrete[slideIndex].classList.add('fade');
+}
+
+// Galería de imgs
+function showGallery(img) {
+    // Contenedor de la img grande
+    let expImg = document.getElementById('expImg');
+
+    // Copiamos el src de la img clicada y se la asignamos a la grande
+    expImg.src = img.src;
+
+    // Le damos display al contenedor padre la img grande
+    expImg.parentElement.style.display = 'block';
+
 }

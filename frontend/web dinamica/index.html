@@ -7,7 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web dinámica</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modal-form.css">
+    <link rel="stylesheet" href="./css/dropdown-menu.css">
+    <link rel="stylesheet" href="./css/banner.css">
+    <link rel="stylesheet" href="./css/gallery.css">
+
+
+    <link rel="stylesheet" href="./css/media-query.css">
 </head>
 
 <body>
@@ -42,7 +49,7 @@
                     Cancelar
                 </button>
                 <span class="psw">Olvidaste la <a href="#">
-                    contraseña
+                        contraseña
                     </a>?
                 </span>
             </div>
@@ -106,7 +113,26 @@
 
     <!-- <div style="height: 800px; width: 100%; background-color: rgb(189, 242, 197)"></div> -->
 
+    <!-- Galería de imágenes -->
+
+    <!-- Hacer un grid solamente usando divs -->
+    <div class="gallery-container">
+        <div class="row">
+            <div class="column"><img src="../res/img/img1.jpg" alt="" onclick="showGallery(this)"></div>
+            <div class="column"><img src="../res/img/img2.jpg" alt="" onclick="showGallery(this)"></div>
+            <div class="column"><img src="../res/img/img3.jpg" alt="" onclick="showGallery(this)"></div>
+            <div class="column"><img src="../res/img/img4.jpg" alt="" onclick="showGallery(this)"></div>
+        </div>
+
+        <div class="exp-img-container">
+            <span class="btnClose" onclick="this.parentElement.style.display = 'none';">&times;</span>
+            <img id="expImg">
+            <div id="imgtxt">Texto de img</div>
+        </div>
+    </div>
+
+
 </body>
-<script src="script-vanilla.js"></script>
+<script src="./js/script-vanilla.js"></script>
 
 </html>
