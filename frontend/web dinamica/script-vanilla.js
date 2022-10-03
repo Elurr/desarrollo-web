@@ -19,7 +19,7 @@ btnCancel.addEventListener('click', () => {
 })
 
 // Al hacer clic fuera del modal, éste se cierra
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modalForm) {
         modalForm.style.display = 'none';
     }
@@ -33,16 +33,18 @@ window.onclick = function(event) {
 // declaramos un array con los contenedores de las imgs
 const carrete = document.getElementsByClassName('carousel-img');
 // declaramos un índice para el array carrete
-let slideIndex = 0;
+let slideIndex = -1;
 
 function showSlides() {
- 
+
     // limpiamos el carrete
     for (let i = 0; i < carrete.length; i++) {
         carrete[i].style.display = 'none';
         carrete[i].classList.remove('fade');
     }
-
+    // aumentamos el contador del índice del carrete
+    slideIndex++;
+    
     // mostrar la siguiente img
     if (slideIndex >= carrete.length) {
         // si el contador supera la longitud del carrete, se reinicia
@@ -51,13 +53,61 @@ function showSlides() {
     carrete[slideIndex].style.display = 'block';
     carrete[slideIndex].classList.add('fade');
 
-    // aumentamos el contador del índice del carrete
-    slideIndex++;
+
 
     // le damos un timeout para que se repita
-    // setTimeout(showSlides, 3000);
+    setTimeout(showSlides, 8000);
     // cambia de imagen cada 3 segundos
 }
 
-// arrancamos la función
+//arrancamos la función
 showSlides();
+
+
+// Cambiar img con las flechas
+function moveSlides(x) {
+
+    // limpiamos el carrete
+    for (let i = 0; i < carrete.length; i++) {
+        carrete[i].style.display = 'none';
+        carrete[i].classList.remove('fade');
+    }
+
+    // aumentamos el contador del índice del carrete
+    slideIndex += x;
+    // x es +1 si hemos pulsado la flecha de siguiente, por lo que el indice del
+    // carrete aumenta en 1
+    // y viceversa
+
+
+    // mostrar la siguiente img
+    if (slideIndex >= carrete.length) {
+        // si el contador supera la longitud del carrete, se reinicia
+        slideIndex = 0;
+
+    } else if (slideIndex < 0) {
+        // si pulsamos la flecha izquierda cuando el índice está en 0
+        // volvemos a la última posición del carrete
+        slideIndex = carrete.length - 1;
+    }
+    carrete[slideIndex].style.display = 'block';
+    carrete[slideIndex].classList.add('fade');
+
+}
+
+// arrancamos el carrusel
+// moveSlides(0);
+
+// Cambiar imgs con los puntos/thumbnails/miniaturas
+function chooseSlides(x) {
+
+    // limpiamos el carrete
+    for (let i = 0; i < carrete.length; i++) {
+        carrete[i].style.display = 'none';
+        carrete[i].classList.remove('fade');
+    }
+
+    slideIndex = x;
+    carrete[slideIndex].style.display = 'block';
+    carrete[slideIndex].classList.add('fade');
+}
