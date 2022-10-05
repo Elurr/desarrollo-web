@@ -23,18 +23,19 @@ div.pic {
     width: 100%;
     height: 350px;
 
+    background-color: burlywood;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .pic.first {
-    background-image: url(../res/img/img1.jpg);
+    background-image: url(../../res/img/img1.jpg);
 }
 .pic.second {
-    background-image: url(../res/img/img2.jpg);
+    background-image: url(../../res/img/img2.jpg);
 }
 .pic.third {
-    background-image: url(../res/img/img3.jpg);
+    background-image: url(../../res/img/img3.jpg);
 }
 
     /* Animación del cambio de img en el carrusel */
@@ -126,13 +127,13 @@ div.numbertext {
     transform: translateX(-50%);
 }
 .dots-container :nth-child(1) {
-    background-image: url(../res/img/img1.jpg);
+    background-image: url(../../res/img/img1.jpg);
 }
 .dots-container :nth-child(2) {
-    background-image: url(../res/img/img2.jpg);
+    background-image: url(../../res/img/img2.jpg);
 }
 .dots-container :nth-child(3) {
-    background-image: url(../res/img/img3.jpg);
+    background-image: url(../../res/img/img3.jpg);
 }
 
 .dot {

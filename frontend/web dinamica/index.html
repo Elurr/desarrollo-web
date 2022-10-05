@@ -10,16 +10,19 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/modal-form.css">
     <link rel="stylesheet" href="./css/dropdown-menu.css">
+    <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/banner.css">
     <link rel="stylesheet" href="./css/gallery.css">
 
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
+    <!-- Media queries -->
     <link rel="stylesheet" href="./css/media-query.css">
 </head>
 
 <body>
-    <h2>Formulario (modal) de Inicio de Sesión</h2>
-
+    <!-- Formulario (modal) de Inicio de Sesión -->
     <button id="btnLogin">Login</button>
 
     <div id="loginForm" class="modal">
@@ -65,6 +68,34 @@
             <a href="#">Link 3 </a>
         </div>
     </div>
+
+    <!-- Menú Responsive con barra de búsqueda -->
+    <nav class="navbar">
+        <div class="nav-container-left">
+            <div class="links-container">
+                <a href="javascript:void(0)" class="icon">
+                    <i class="bi bi-list"></i>
+                </a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link">Link</a>
+                    <a href="#" class="nav-link">Link</a>
+                    <a href="#" class="nav-link">Link</a>
+                </div>
+            </div>
+            <div class="nav-btn-container">
+                <a href="#" class="icon">
+                    <i class="bi bi-house-door-fill"></i>
+                </a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+            </div>
+        </div>
+        <div class="nav-container-right">
+            <input type="search" name="" id="">
+            <i class="bi bi-search"></i>
+        </div>
+    </nav>
 
     <!-- Banner con carrusel de imágenes -->
     <div class="carousel-container">
@@ -118,10 +149,14 @@
     <!-- Hacer un grid solamente usando divs -->
     <div class="gallery-container">
         <div class="row">
-            <div class="column"><img src="../res/img/img1.jpg" alt="" onclick="showGallery(this)"></div>
-            <div class="column"><img src="../res/img/img2.jpg" alt="" onclick="showGallery(this)"></div>
-            <div class="column"><img src="../res/img/img3.jpg" alt="" onclick="showGallery(this)"></div>
-            <div class="column"><img src="../res/img/img4.jpg" alt="" onclick="showGallery(this)"></div>
+            <div class="column"><img src="../res/img/img1.jpg" alt="" onclick="showGallery(this)"
+                    onmouseover="showGallery(this)"></div>
+            <div class="column"><img src="../res/img/img2.jpg" alt="" onclick="showGallery(this)"
+                    onmouseover="showGallery(this)"></div>
+            <div class="column"><img src="../res/img/img3.jpg" alt="" onclick="showGallery(this)"
+                    onmouseover="showGallery(this)"></div>
+            <div class="column"><img src="../res/img/img4.jpg" alt="" onclick="showGallery(this)"
+                    onmouseover="showGallery(this)"></div>
         </div>
 
         <div class="exp-img-container">

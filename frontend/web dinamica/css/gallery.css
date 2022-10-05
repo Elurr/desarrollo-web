@@ -4,6 +4,8 @@
 .gallery-container {
     display: flex;
     flex-direction: column;
+
+    margin: 10px 0;
 }
 
 .row {
@@ -13,10 +15,12 @@
 }
 
 .column {
-    padding: 10px;
+    padding-right: 10px;
 }
 .column img{
     height: 100%;
+    max-width: 125px;
+    /* Firefox requiere del max-width o le da a los divs el ancho original de la img */
 
     opacity: 0.8;
     cursor: pointer;
@@ -30,7 +34,7 @@
     position: relative;
     display: none;
 
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .btnClose {

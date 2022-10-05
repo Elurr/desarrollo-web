@@ -110,6 +110,7 @@ function chooseSlides(x) {
 }
 
 // Galería de imgs
+//Al hacer clic
 function showGallery(img) {
     // Contenedor de la img grande
     let expImg = document.getElementById('expImg');
