@@ -13,10 +13,17 @@
             background: black;
             color: white;
             font-family: 'dragonlord';
+
+            overflow-y: hidden;
         }
 
         div {
             position: relative;
+
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         video {
@@ -30,16 +37,18 @@
 
         h1 {
             background: black;
-            font-size: 350px;
+            font-size: 450px;
             text-align: center;
             font-weight: 400;
             mix-blend-mode: multiply;
+
+            height: 100%;
         }
     </style>
 </head>
 <body>
     <div>
-        <video autoplay preload loop
+        <video autoplay muted preload loop
         src="../res/video/doctor-strange.mov"></video>
         <h1>DOCTOR STRANGE</h1>
     </div>
