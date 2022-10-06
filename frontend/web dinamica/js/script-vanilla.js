@@ -122,3 +122,10 @@ function showGallery(img) {
     expImg.parentElement.style.display = 'block';
 
 }
+
+
+
+
+
+
+
