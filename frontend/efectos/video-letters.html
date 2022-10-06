@@ -43,15 +43,22 @@
             mix-blend-mode: multiply;
 
             height: 100%;
+            user-select: none;
         }
     </style>
 </head>
 <body>
-    <div>
-        <video autoplay muted preload loop
+    <div onclick="toggleMute()">
+        <video id="myVideo" autoplay muted preload loop
         src="../res/video/doctor-strange.mov"></video>
         <h1>DOCTOR STRANGE</h1>
     </div>
-    
 </body>
+<script>
+//unmute video on window click
+function toggleMute() {
+  var video=document.getElementById("myVideo");
+  video.muted = !video.muted;
+}
+</script>
 </html>
