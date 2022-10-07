@@ -15,9 +15,21 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
+        body {
+            margin: 0;
+        }
+
         .relleno {
             height: 100vh;
             background: linear-gradient(45deg, black, rgb(3, 3, 92));
+        }
+
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+
+            border-radius: 0;
         }
     </style>
 </head>
@@ -53,4 +65,37 @@
     <div class="relleno"></div>
     <div class="relleno"></div>
 </body>
+<script>
+    /* 
+        Tenemos que declarar una variable en la que se almacene 
+        la posición vertical actual de la pantalla (scroll)
+        
+        Luego, al hacer scroll, comprobamos is hemos subido o hemos bajado.
+        En caso de haber subido, se visualizará la barra de navegación
+    */
+
+    // Esta el la posición por defecto y se guarda al cargar la página
+    let prevScrollPosition = window.pageYOffset;
+
+    window.onscroll = () => {
+
+        // Guardamos la nueva posición al hacer scroll
+        let currentScrollPosition = window.pageYOffset;
+
+        // Comparamos la posición actual con la anterior
+        if (prevScrollPosition > currentScrollPosition) {
+            // Si la posición vertical actual es menor que la anterior
+            // quiere decir que hemos subido
+
+            document.getElementById('navbar').style.top = '0';
+        
+        } else {
+
+            document.getElementById('navbar').style.top = '-45px';
+        }
+
+        // Actualizamos la posición anterior
+        prevScrollPosition = currentScrollPosition;
+    }
+</script>
 </html>
