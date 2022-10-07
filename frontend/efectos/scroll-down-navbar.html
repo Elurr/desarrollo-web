@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- links al css de la barra y a los iconos de Bootstrap -->
+    <link rel="stylesheet" href="../web dinamica/css/navbar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .relleno {
+            height: 100vh;
+            background: linear-gradient(45deg, black, rgb(3, 3, 92));
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar" class="navbar">
+        <div class="nav-container-left">
+            <div class="links-container">
+                <a href="javascript:void(0)" class="icon">
+                    <i class="bi bi-list"></i>
+                </a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link">Link</a>
+                    <a href="#" class="nav-link">Link</a>
+                    <a href="#" class="nav-link">Link</a>
+                </div>
+            </div>
+            <div class="nav-btn-container">
+                <a href="#" class="icon">
+                    <i class="bi bi-house-door-fill"></i>
+                </a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+            </div>
+        </div>
+        <div class="nav-container-right">
+            <input type="search" name="" id="">
+            <i class="bi bi-search"></i>
+        </div>
+    </nav>
+
+    <!-- divs de relleno -->
+    <div class="relleno"></div>
+    <div class="relleno"></div>
+</body>
+</html>
