@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas en HTML</title>
+
+    <style>
+        table.tabla1 {
+            border: 4px solid black;
+            border-collapse: collapse;
+            /* Esta línea hace que las celdas se junten, eliminando los espacios en blanco */
+
+            text-align: center;
+        }
+
+        .tabla1 th {
+            border: 2px solid black;
+            padding: 5px 10px;
+            background-color: lightgray;
+        }
+
+        .tabla1 td {
+            border: 1.5px solid gray;
+
+        }
+
+        table.tabla2 {
+            border: 4px solid black;
+            width: 300px;
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .tabla2 th {
+            text-align: left;
+            background-color: rgb(172, 172, 172);
+            padding: 5px;
+            width: 50%;
+            border-right: 1px solid rgb(146, 146, 146);
+        }
+
+        .tabla2 td {
+            text-align: right;
+            border: 1px solid rgb(115, 115, 115);
+            border-bottom: 1px solid rgb(193, 193, 193);
+            padding: 5px;
+        }
+
+        .tabla2 td.nombre {
+            text-align: left;
+            /* font-weight permite poner las letras en negrita sin necesidad de usar una etiqueta <b> */
+            font-weight: bold;
+            background-color: rgb(229, 229, 229);
+        }
+
+        hr {
+            height: 2px;
+            background-color: black;
+            border: 0;
+        }
+
+        .table3 {
+            border: 4px solid black;
+            border-collapse: collapse;
+        }
+
+        .table3 th,
+        td {
+            padding: 0 5px;
+        }
+
+        .table3 th {
+            border: 2px solid rgb(80, 80, 80);
+            background-color: rgb(172, 172, 172);
+        }
+
+        .table3 td {
+            border: 1px solid rgb(172, 172, 172);
+        }
+
+        .table3 .esp {
+            color: red;
+            font-weight: bold;
+        }
+
+        .table3 tr:hover {
+            background-color: rgb(227, 227, 227);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tablas en HTML</h1>
+
+    <table class="tabla1">
+        <tr>
+            <!-- Fila de cabeceros de la tabla -->
+            <th>
+                Nombre
+            </th>
+            <th>
+                Apellido
+            </th>
+            th
+            <th>
+                Edad
+            </th>
+            
+        </tr>
+
+        <tr>
+            <td>
+                María
+            </td>
+            <td>
+                Cepeda
+            </td>
+            <td>
+                18
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Dafne
+            </td>
+            <td>
+                Ribera
+            </td>
+            <td>
+                21
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Rebeca
+            </td>
+            <td>
+                Canónico
+            </td>
+            <td>
+                29
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Idurre
+            </td>
+            <td>
+                García
+            </td>
+            <td>
+                23
+            </td>
+
+        </tr>
+
+
+    </table>
+
+    <hr>
+
+    <table class="tabla2">
+        <tr>
+            <th>
+                Person
+            </th>
+            <th>
+                Age
+            </th>
+        </tr>
+        <tr>
+            <td class="nombre">
+                Chris
+            </td>
+            <td class="edad">
+                38
+            </td>
+        </tr>
+        <tr>
+            <td class="nombre">
+                Dennis
+            </td>
+            <td class="edad">
+                45
+            </td>
+        </tr>
+        <tr>
+            <td class="nombre">
+                Sarah
+            </td>
+            <td class="edad">
+                29
+            </td>
+        </tr>
+        <tr>
+            <td class="nombre">
+                Karen
+            </td>
+            <td class="edad">
+                47
+            </td>
+        </tr>
+
+    </table>
+
+    <hr>
+
+
+    El desempleo en España
+
+
+    La siguiente tabla muestra la evolución del desempleo en España, comparado con la media de los 27 países de la
+    Unión Europea, Grecia, que compite con España en ser el primero en esta vergonzosa competición y Estados Unidos
+    y Japón, dos de las primeras economías mundiales.
+
+    <table class="table3">
+        <tr>
+            <th>País</th>
+            <th>2000</th>
+            <th>2001</th>
+            <th>2002</th>
+            <th>2003</th>
+            <th>2004</th>
+            <th>2005</th>
+            <th>2006</th>
+            <th>2007</th>
+            <th>2008</th>
+            <th>2009</th>
+            <th>2010</th>
+            <th>2011</th>
+            <th>2012</th>
+            <th>2013</th>
+        </tr>
+
+        <tr>
+            <td>UE (27 países)</td>
+            <td>8.9</td>
+            <td>8.7</td>
+            <td>9</td>
+            <td>9.1</td>
+            <td>9.3</td>
+            <td>9</td>
+            <td>8.2</td>
+            <td>7.2</td>
+            <td>7</td>
+            <td>9</td>
+            <td>9.6</td>
+            <td>9.6</td>
+            <td>10.4</td>
+            <td>10.8</td>
+        </tr>
+
+        <tr class="esp">
+            <td>España</td>
+            <td>11.9</td>
+            <td>10.6</td>
+            <td>11.5</td>
+            <td>11.5</td>
+            <td>11</td>
+            <td>9.2</td>
+            <td>8.5</td>
+            <td>8.2</td>
+            <td>11.3</td>
+            <td>17.9</td>
+            <td>19.9</td>
+            <td>21.4</td>
+            <td>24.8</td>
+            <td>26.1</td>
+        </tr>
+
+        <tr>
+            <td>Grecia</td>
+            <td>11.2</td>
+            <td>10.7</td>
+            <td>10.3</td>
+            <td>9.7</td>
+            <td>10.6</td>
+            <td>10</td>
+            <td>9</td>
+            <td>8.4</td>
+            <td>7.8</td>
+            <td>9.6</td>
+            <td>12.7</td>
+            <td>17.9</td>
+            <td>24.5</td>
+            <td>27.5</td>
+        </tr>
+
+        <tr>
+            <td>Estados Unidos</td>
+            <td>4</td>
+            <td>4.8</td>
+            <td>5.8</td>
+            <td>6</td>
+            <td>5.5</td>
+            <td>5.1</td>
+            <td>4.6</td>
+            <td>4.6</td>
+            <td>5.8</td>
+            <td>9.3</td>
+            <td>9.6</td>
+            <td>8.9</td>
+            <td>8.1</td>
+            <td>7.4</td>
+        </tr>
+
+        <tr>
+            <td>Japón</td>
+            <td>4.7</td>
+            <td>5</td>
+            <td>5.4</td>
+            <td>5.3</td>
+            <td>4.7</td>
+            <td>4.4</td>
+            <td>4.1</td>
+            <td>3.9</td>
+            <td>4</td>
+            <td>5.1</td>
+            <td>5.1</td>
+            <td>4.6</td>
+            <td>4.3</td>
+            <td>4</td>
+        </tr>
+
+
+        Fuente: Índice de desempleo anual, Eurostat
+    </table>
+
+    <hr>
+
+    <table class="table3">
+        <tr>
+            <th>Categoría</th>
+            <th>Etiquetas</th>
+        </tr>
+        
+
+        <tr><th rowspan="5">Formulario</th><td>form</td></tr>
+        <tr><td>button</td></tr>
+        <tr><td>input</td></tr>
+        <tr><td>select</td></tr>
+        <tr><td>textarea</td></tr>
+
+        <tr><th rowspan="5">Tabla</th><td>table</td></tr>
+        <tr><td>tr</td></tr>
+        <tr><td>th</td></tr>
+        <tr><td>td</td></tr>
+        <tr><td>caption</td></tr>
+
+        <tr><th rowspan="6">Texto</th><td>b</td></tr>
+        <tr><td>em</td></tr>
+        <tr><td>i</td></tr>
+        <tr><td>strong</td></tr>
+        <tr><td>sub</td></tr>
+        <tr><td>sup</td></tr>
+    
+
+        
+        
+        
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+    </table>
+
+
+    <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ... 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ... 
+
+
+
+
+    </pre>
+
+</body>
+
+</html>

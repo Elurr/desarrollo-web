@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Shalimar">
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+
+            position: relative;
+        }
+
+        div h2 {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            text-align: center;
+            color: white;
+            
+            font-family: "Shalimar";
+            font-size: 30px;
+            width: 200px;
+        }
+
+        div img {
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: 8px 8px 10px rgba(55, 55, 55, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabajar con imágenes en HTML y CSS</h1>
+    
+    <h2>Ubicar texto dentro de una imagen</h2>
+
+    <div>
+        <img
+        src="./recursos/bosque.jpg" alt="">
+        <h2>UN BOSQUE DE ENSUEÑO</h2>
+    </div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla de una página web</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        header {
+            background-color: rgb(68, 187, 187);
+            color: white;
+            height: 180px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header h1 {
+            margin-bottom: 0;
+        }
+
+        nav {
+            background-color: rgb(75, 75, 75);
+
+            display: flex;
+            justify-content: space-between;
+
+            padding: 5px 0; 
+            /* si le indicamos 2 cifras al padding, tomará el primer valor para el padding vertical y el segundo para el horizontal */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgb(220, 220, 220);
+
+            padding: 5px;
+        }
+        /* :hover es un estado especial, que se aplica al pasar el ratón/cursor por encima del elemento */
+        nav a:hover {
+            color: rgb(75, 75, 75);
+            background-color: rgb(220, 220, 220);
+        }
+
+        section {
+            display: flex;
+        }
+
+        section div {
+            padding: 10px;
+        }
+
+        .div-izq {
+            width: 30%;
+        }
+
+        .div-der {
+            width: 70%;
+        }
+
+        footer {
+            background-color: lightgray;
+            height: 75px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* text-align: center;
+            padding: 15px; */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Esto es la cabecera de la web -->
+        <h1>My Website</h1>
+        <h5>A website created by me.</h5>
+    </header>
+
+    <nav>
+        <!-- Esto es el menú de navegación -->
+        <div>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </div>
+        <div>
+            <a href="#">Link</a>
+        </div>
+    </nav>
+
+    <section>
+        <div class="div-izq">
+            <!-- Esto es el contenedor de la izquierda -->
+            <h2>About me</h2>
+            <p>blah bla blah</p>
+            <img width="100%" height="150px" src="https://fondosmil.com/fondo/3879.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, iusto?</p>
+
+            <h3>More text</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <img width="100%" height="50px" src="https://fondosmil.com/fondo/3879.jpg" alt="">
+            <img width="100%" height="50px" src="https://fondosmil.com/fondo/3879.jpg" alt="">
+            <img width="100%" height="50px" src="https://fondosmil.com/fondo/3879.jpg" alt="">
+        </div>
+
+        <div class="div-der">
+            <!-- Este es el contenedor de la derecha -->
+            <h2>TITLE HEADING</h2>
+            <p>Title description, Dec 7, 2017</p>
+            <img width="100%" height="150px" src="https://fondosmil.com/fondo/3879.jpg" alt="">
+            <p>Some text.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A asperiores quae distinctio ab architecto
+                delectus.</p>
+
+            <h2>TITLE HEADING</h2>
+            <p>Title description, Dec 7, 2017</p>
+            <img width="100%" height="150px" src="https://fondosmil.com/fondo/3879.jpg" alt="">
+            <p>Some text.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A asperiores quae distinctio ab architecto
+                delectus.</p>
+        </div>
+    </section>
+
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+
+</body>
+
+</html>

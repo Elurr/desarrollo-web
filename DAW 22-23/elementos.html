@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos avanzados de HTML</title>
+    <link rel="stylesheet" href="general.css">
+
+    <style>
+        /* Se seleccionan las a que están dentro de un div */
+        div {
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            /* Ejemplo de cómo centrar el botón */
+        }
+
+        div a {
+            text-decoration: none;
+
+            background-color: rgb(80, 80, 80);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        h1 {
+            /* border: 1px solid black; */
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+
+            height: 400px;
+
+        }
+
+        section a {
+            margin: 5px;
+        }
+
+        section img:hover {
+            transform: scale(1.1);
+            transition: all 2s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Elementos avanzados de HTML</h1>
+
+    <h2>Links o hipervínculos</h2>
+    <p>
+        Los links se encuentran en todo tipo de páginas. Permiten al usuario navegar por los documentos de la web.
+    </p>
+    <p>
+        Cuando clicas en un link te mueve a otro documento o a una parte concreta del mismo.
+    </p>
+    <p>
+        Cuando se pasa el cursor sobre un link, éste se torna en una mano.
+    </p>
+    <p>
+        Un link se define mediante el elemento <code>&lt;a&gt;</code>
+    </p>
+    <p>
+        La sintaxis de un link, por norma general, es: <br>
+        <code>
+            &lt;a href="url"&gt;Texto del link&lt;/a&gt;
+        </code>
+    </p>
+    <p>
+        El atributo más importante de un link es el "href" ya que es éste el que indica el punto al que nos llevará el
+        link.
+    </p>
+
+    <p>Ejemplos:</p>
+
+    <a href="https://www.google.com" target="_blank">Link a Google</a> <br>
+    <a href="CSS-basico.html">Link a la teoría de CSS</a>
+
+    <p>
+        Los links tienen 3 estados:
+    <ul>
+        <li>Son azules cuando no han sido visitados.</li>
+        <li>Morados cuando ya han sido clicados.</li>
+        <li>y rojos cuando están activos.</li>
+    </ul>
+    </p>
+
+    <p>
+        Los links se pueden modificar mediante CSS para que tengan un aspecto completamente distinto.
+    </p>
+
+    <div>
+        <a href="#">Esto es un link</a>
+    </div>
+
+    <h3>Usar una imagen como link</h3>
+
+    <a target="_blank"
+        href="https://www.muyinteresante.es/mascotas/fotos/consejos-para-socializar-a-un-gatito-cachorro">
+        <img width="60%"
+            src="https://estaticos.muyinteresante.es/uploads/images/gallery/59a669fc5bafe88febb3d6cc/gatito-cesped_0.jpg"
+            alt="">
+    </a>
+
+
+    <!-- Link a la página de Ferrari -->
+    <a target="_blank" href="https://www.ferrari.com/es-ES">
+        <!-- En en el href de la a, se escribe el link a la web a visitar -->
+        <img width="100%" src="https://images.pexels.com/photos/337909/pexels-photo-337909.jpeg" alt="">
+        <!-- en el src de la img se escribe el link de la imagen que queremos visualizar -->
+    </a>
+
+    <!-- link a la página de H-D -->
+    <a target="_blank" href="https://www.harley-davidson.com">
+        <img width="100%"
+            src="https://media.istockphoto.com/photos/motorcycle-driver-riding-in-dolomite-pass-italy-europe-picture-id1171675830?k=20&m=1171675830&s=612x612&w=0&h=3h5JXLCfnnRq5y-bDEMjtXYpZD1wG27v4xLk6FP5_-o="
+            alt="">
+    </a>
+
+    <!-- Link a paseos aéreos -->
+    <a target="_blank" href="https://www.aladinia.com/vuelos/vuelo-avioneta">
+        <img width="100%" src="https://images.pexels.com/photos/13530504/pexels-photo-13530504.jpeg" alt="">
+    </a>
+
+
+
+</body>
+
+</html>
